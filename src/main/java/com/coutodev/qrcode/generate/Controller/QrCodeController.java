@@ -25,7 +25,7 @@ public class QrCodeController {
             QrCodeGenerateResponse response = this.qrCodeGeneraterService.generaterAndUploadQrCode(request.text());
             return ResponseEntity.ok(response);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
             return ResponseEntity.internalServerError().build();
         }
 

@@ -11,6 +11,7 @@ COPY --from=build /app/target/*.jar app.jar
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 
+EXPOSE 8081
 ENV AWS_REGION=us-east-1
 ENV AWS_BUCKET_NAME=storager-qrcode
 
